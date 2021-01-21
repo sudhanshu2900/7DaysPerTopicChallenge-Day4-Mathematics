@@ -1,0 +1,30 @@
+PROBLEM: I/P: A=220, B=240
+         O/P: 1
+         
+         Explain: Proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110. Sum of these is 284. Proper divisors
+                  of 284 are 1, 2, 4, 71 and 142 with sum 220.
+                  
+         If pairs are amicable then it return 1 otherwise return 0.
+                  
+SOLUTION:
+
+    int isAmicable(int A , int B) {
+        
+        int sumA=0, sumB=0;
+        for(int i=1;i<A;i++){
+            if(A%i==0){
+                sumA+=i;
+            }
+        }
+        for(int i=1;i<B;i++){
+            if(B%i==0){
+                sumB+=i;
+            }
+        }
+        if((sumA==B)&&(sumB==A)){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
