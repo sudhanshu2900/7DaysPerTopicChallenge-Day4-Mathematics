@@ -1,0 +1,19 @@
+PROBLEM: I/P- N=1
+         O/P- 1
+         
+         I/P- N=2
+         O/P- 5    (4- 1*1 and 1- 2*2)
+         
+         Explain: general formula for this is (n^2)+((n-1)^2)+((n-2)^2)+......+1
+         
+SOLUTION:
+
+    long long rec(long long N){
+        if(N==1) return 1;
+        else{
+            return (N*N)+rec(N-1);
+        }
+    }
+    long long squaresInChessBoard(long long N) {
+        rec(N);
+    }
