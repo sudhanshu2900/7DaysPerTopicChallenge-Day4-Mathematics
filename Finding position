@@ -1,0 +1,33 @@
+Some people are standing in a queue. A selection process follows a rule where people standing on even positions are selected. 
+Of the selected people a queue is formed and again out of these only people on even position are selected. This continues until 
+we are left with one person. Find out the position of that person in the original queue.
+
+PROBLEM: I/P- N=5
+         O/P- 4
+         
+         I/P- N=9
+         O/P- 8
+         
+SOLUTION:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int fun(int n)
+{
+    if(n==1) return 1;
+    else
+    {
+        return 2*fun(n/2);
+    }
+}
+
+int main() {
+	int t,n;
+	cin>>t;
+	while(t--){
+	    cin>>n;
+	    cout<<fun(n)<<endl;
+	}
+	
+}
